@@ -191,6 +191,18 @@ public class ListController {
 
     public void editListItem(ActionEvent actionEvent) {
     }
+
+    public void sortByName(ActionEvent actionEvent) {
+        lManage.sortByName();
+    }
+
+    public void sortBySerial(ActionEvent actionEvent) {
+        lManage.sortBySerial();
+    }
+
+    public void sortByValue(ActionEvent actionEvent) {
+        lManage.sortByValue();
+    }
     //This is going to carry strong similarities to the previous applications
 
 

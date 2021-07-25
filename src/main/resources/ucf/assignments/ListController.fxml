@@ -21,8 +21,8 @@
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="120.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="68.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="78.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="92.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="177.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="119.0" />
   </columnConstraints>
   <rowConstraints>
       <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="48.0" />
@@ -143,7 +143,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
       </Text>
-      <Button mnemonicParsing="false" onAction="#sendValue" prefHeight="25.0" prefWidth="185.0" text="Send List To" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+      <Button mnemonicParsing="false" onAction="#sendValue" prefHeight="32.0" prefWidth="152.0" text="Send HTML" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -151,7 +151,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <TextField fx:id="sendField" promptText="name.txt" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+      <TextField fx:id="sendField" promptText="name.txt" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -159,7 +159,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </TextField>
-      <Button mnemonicParsing="false" onAction="#recValue" prefHeight="25.0" prefWidth="188.0" text="Receive List From" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+      <Button mnemonicParsing="false" onAction="#recValue" prefHeight="32.0" prefWidth="152.0" text="Receive HTML" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -167,7 +167,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <TextField fx:id="recField" promptText="name.txt" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+      <TextField fx:id="recField" promptText="name.txt" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -334,7 +334,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </TextField>
-      <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="189.0" text="Sort List By Name" GridPane.columnIndex="7" GridPane.rowIndex="8">
+      <Button mnemonicParsing="false" onAction="#sortByName" prefHeight="31.0" prefWidth="189.0" text="Sort List By Name" GridPane.columnIndex="7" GridPane.rowIndex="8">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -342,8 +342,40 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="191.0" text="Sort List By Serial #" GridPane.columnIndex="7" GridPane.rowIndex="9" />
-      <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="195.0" text="Sort List By Value " GridPane.columnIndex="7" GridPane.rowIndex="10" />
+      <Button mnemonicParsing="false" onAction="#sortBySerial" prefHeight="31.0" prefWidth="191.0" text="Sort List By Serial #" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+      <Button mnemonicParsing="false" onAction="#sortByValue" prefHeight="31.0" prefWidth="195.0" text="Sort List By Value " GridPane.columnIndex="7" GridPane.rowIndex="10" />
+      <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="152.0" text="Send TSV" GridPane.columnIndex="6" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="152.0" text="Send Json" GridPane.columnIndex="8" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="4.0" left="40.0" right="4.0" top="4.0" />
+         </padding>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="152.0" text="Receive TSV" GridPane.columnIndex="6" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="152.0" text="Receive Json" GridPane.columnIndex="8" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </Button>
    </children>
    <padding>
       <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
