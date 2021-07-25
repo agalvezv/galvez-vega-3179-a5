@@ -74,6 +74,21 @@ public class ListController {
 
 
     public void sendValue(ActionEvent actionEvent) {
+        sendS = sendField.getText();
+        ListMoveOperations mManage = new ListMoveOperations(aList,names,sendS);
+        mManage.sendListToHTML();
+        sendField.setText("Filename: "+sendS);
+    }
+    public void recValue(ActionEvent actionEvent) {
+        recS = recField.getText();
+        ListMoveOperations mManage = new ListMoveOperations(aList,names,recS);
+        aList.clear();
+        aList = mManage.recListFromHTML();
+
+        names.clear();
+        names = mManage.recNamesFromHTML();
+
+        recField.setText("Filename: "+recS);
     }
 
     public void incompListValue(ActionEvent actionEvent) {
@@ -118,8 +133,7 @@ public class ListController {
         }
     }
 
-    public void recValue(ActionEvent actionEvent) {
-    }
+
 
     public void newMonValue(ActionEvent actionEvent) {
         //NumberFormat fmt = NumberFormat.getCurrencyInstance();
