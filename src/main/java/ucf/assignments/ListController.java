@@ -5,6 +5,10 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.text.NumberFormat;
+
 
 public class ListController {
 
@@ -73,33 +77,96 @@ public class ListController {
     }
 
     public void incompListValue(ActionEvent actionEvent) {
+        //ignore
     }
 
     public void totalListValue(ActionEvent actionEvent) {
+        displayField.clear();
+        dispS = lManage.allDisplay();
+        displayField.setText(dispS);
     }
 
     public void compListValue(ActionEvent actionEvent) {
+        //ignore
     }
 
     public void newListValue(ActionEvent actionEvent) {
+        aList.add(" ");
+        lManage.setListInformation(aList);
     }
 
     public void newNameValue(ActionEvent actionEvent) {
+        nameS = nameField.getText();
+        lManage.addName(nameS);
+        //complete = lManage.updateComplete();
+        nameField.setText("Current name: "+nameS);
+
+
+        int length = nameS.length();
+        if(length>2&&length<256)
+        {
+            aList = lManage.updateList();
+            names = lManage.updateNames();
+
+            nameField.setText("Name set.");
+        }
+        else
+        {
+            nameField.setText("Bad value. Enter a description between 2-256 characters.");
+        }
     }
 
     public void recValue(ActionEvent actionEvent) {
     }
 
     public void newMonValue(ActionEvent actionEvent) {
+        //NumberFormat fmt = NumberFormat.getCurrencyInstance();
+        //System.out.println(fmt.format(120.00));
+
+        valueS = valueField.getText();
+        NumberFormat money = NumberFormat.getCurrencyInstance();
+        Double valueD = Double.parseDouble(valueS);
+        //money.format(valueD);
+        valueS = "" + money.format(valueD);
+
+        lManage.addMonValue(valueS);
+        aList = lManage.updateList();
+        valueField.setText("Money value set.");
+
+
     }
 
     public void newSerialNumber(ActionEvent actionEvent) {
+        serialS = serialField.getText();
+        Pattern pattern = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]");
+        Matcher match = pattern.matcher(serialS);
+
+        if(!match.matches()){
+            //response = "The employee ID must be in the format of AA-1234.";
+            //printResult(response);
+            serialField.setText("Bad value. Enter a date in the form YYYY-MM-DD");
+
+        }
+        else{
+            //String mydesc= lManage.descS;
+            lManage.addSerial(dateS, mydesc);
+            aList = lManage.updateList();
+            serialField.setText("Serial Number Set.");
+        }
     }
 
     public void remValue(ActionEvent actionEvent) {
+        remS = remField.getText();
+        lManage.remList(remS);
+        aList = lManage.updateList();
+        names = lManage.updateNames();
+        remField.setText("Remove: "+remS);
     }
 
     public void clearList(ActionEvent actionEvent) {
+        aList.clear();
+        names.clear();
+        lManage.clearList();
     }
 
     public void editSerialValue(ActionEvent actionEvent) {
@@ -109,9 +176,11 @@ public class ListController {
     }
 
     public void compValue(ActionEvent actionEvent) {
+        //not used
     }
 
     public void incompValue(ActionEvent actionEvent) {
+        //not used
     }
 
     public void editName(ActionEvent actionEvent) {
