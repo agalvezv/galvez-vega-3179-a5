@@ -173,9 +173,40 @@ public class ListController {
     }
 
     public void editSerialValue(ActionEvent actionEvent) {
+        String myValue = lManage.valueS;
+        edSerS=edSerField.getText();
+
+        //serialS = serialField.getText();
+        Pattern pattern = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]");
+        Matcher match = pattern.matcher(edSerS);
+
+        if(!match.matches()){
+            //response = "The employee ID must be in the format of AA-1234.";
+            //printResult(response);
+            serialField.setText("Bad value. Enter a date in the form YYYY-MM-DD");
+
+        }
+        else{
+            //String mydesc= lManage.descS;
+            lManage.editSerial(edSerS, valueS);
+            aList = lManage.updateList();
+            serialField.setText("Serial Number Set.");
+        }
     }
 
+
     public void editMonValue(ActionEvent actionEvent) {
+        String mySerial = lManage.serialS;
+        edVal=edValField.getText();
+        //valueS = valueField.getText();
+        NumberFormat money = NumberFormat.getCurrencyInstance();
+        Double valueD = Double.parseDouble(edVal);
+        //money.format(valueD);
+        edVal = "" + money.format(valueD);
+
+        lManage.editMonValue(edVal, mySerial);
+        aList = lManage.updateList();
+        valueField.setText("Money value set.");
     }
 
     public void compValue(ActionEvent actionEvent) {
@@ -187,9 +218,37 @@ public class ListController {
     }
 
     public void editName(ActionEvent actionEvent) {
+        edNameS = edNameField.getText();
+        //nameS = nameField.getText();
+        lManage.addName(edNameS );
+        //complete = lManage.updateComplete();
+        //nameField.setText("Current name: "+edNameS );
+
+
+        int length = edNameS.length();
+        if(length>2&&length<256)
+        {
+            //aList = lManage.updateList();
+            //names = lManage.updateNames();
+            lManage.editName(edNameS);
+
+            nameField.setText("Name set.");
+            //lManage.serialS = "AAAAAAAAA";
+            //lManage.valueS = "0.00";
+        }
+        else
+        {
+            nameField.setText("Bad value. Enter a description between 2-256 characters.");
+        }
     }
 
     public void editListItem(ActionEvent actionEvent) {
+        editemS = editemField.getText();
+        /*
+        public TextField editemField;
+        public String editemS;
+         */
+        lManage.setEditLocation(editemS);
     }
 
     public void sortByName(ActionEvent actionEvent) {

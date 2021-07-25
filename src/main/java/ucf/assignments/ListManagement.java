@@ -10,6 +10,8 @@ public class ListManagement {
 
     public String sendS;
     public String recS;
+    
+    public String itemLocation;
 
 
 
@@ -54,6 +56,7 @@ public class ListManagement {
     }
 
     public void setListInformation(ArrayList aList) {
+        //not needed
     }
 
     public void addName(String nameS) {
@@ -66,9 +69,35 @@ public class ListManagement {
         this.nameS=nameS;
     }
     public void addSerial(String serialS, String valueS) {
+        this.valueS = valueS;
+        serials.add(serialS);
+        int size = aList.size();
+        this.serialS= " " + serialS + " ";
+        for(int i=0; i<size;i++)
+        {
+            if(nameS.equals(names.get(i)))
+            {
+                String lDate = nameS + this.serialS + this.valueS;
+                aList.set(i,lDate);
+            }
+        }
     }
 
-    public void addMonValue(String s, String valueS) {
+    public void addMonValue(String serialTemp, String valueS) {
+        serialS = serialTemp;
+        values.add(valueS);
+        int size = aList.size();
+        this.valueS= " " + valueS + " ";
+        for(int i=0; i<size;i++)
+        {
+            if(nameS.equals(names.get(i)))
+            {
+                String description = nameS + this.serialS + this.valueS;
+                //aList.set(i,aList.get(i)+description);
+                aList.set(i,description);
+            }
+        }
+
     }
 
 
@@ -127,6 +156,12 @@ public class ListManagement {
 
             }
         }
+        aList.clear();
+
+        for(int i=0; i<size;i++)
+        {
+            aList.add(atemp.get(i));
+        }
 
     }
 
@@ -137,19 +172,30 @@ public class ListManagement {
 
         String temp = "";
 
+        ArrayList nametemp = new ArrayList(names);
+
         int size = aList.size();
         for(int i=0; i<size;i++)
         {
-            temp = "" + aList.get(i);
+            //temp = "" + aList.get(i);
             for(int j=0;j<size;j++)
             {
                 temp = "" + aList.get(j);
                 if(temp.contains((CharSequence) serialtemp.get(i)))
                 {
                     atemp.add(aList.get(j));
+                    nametemp.add(names.get(j));
                 }
 
             }
+        }
+        aList.clear();
+        names.clear();
+
+        for(int i=0; i<size;i++)
+        {
+            aList.add(atemp.get(i));
+            names.add(nametemp.get(i));
         }
 
     }
@@ -159,22 +205,87 @@ public class ListManagement {
         ArrayList atemp = new ArrayList();
         Collections.sort(valuetemp);
 
+        ArrayList nametemp = new ArrayList(names);
+
         String temp = "";
 
         int size = aList.size();
         for(int i=0; i<size;i++)
         {
-            temp = "" + aList.get(i);
+            //temp = "" + aList.get(i);
             for(int j=0;j<size;j++)
             {
                 temp = "" + aList.get(j);
                 if(temp.contains((CharSequence) valuetemp.get(i)))
                 {
                     atemp.add(aList.get(j));
+                    nametemp.add(names.get(j));
                 }
 
             }
         }
+        aList.clear();
+        names.clear();
 
+        for(int i=0; i<size;i++)
+        {
+            aList.add(atemp.get(i));
+            names.add(nametemp.get(i));
+        }
+
+    }
+
+    public void setEditLocation(String editemS) {
+        itemLocation = editemS;
+    }
+
+    public void editSerial(String edSerS, String valueS) {
+        this.valueS = valueS;
+        int size = aList.size();
+        this.serialS= " " + edSerS;
+        for(int i=0; i<size;i++)
+        {
+            if(itemLocation.equals(names.get(i)))
+            {
+                String lDate = nameS + this.serialS + this.valueS;
+                aList.set(i,lDate);
+                serials.set(i,edSerS);
+            }
+        }
+    }
+
+    public void editMonValue(String edVal, String mySerial) {
+
+        serialS = mySerial;
+        //values.add(edVal);
+        int size = aList.size();
+        this.valueS=" " + edVal;
+        for(int i=0; i<size;i++)
+        {
+            if(itemLocation.equals(names.get(i)))
+            {
+                String description = nameS + this.serialS + this.valueS;
+                //aList.set(i,aList.get(i)+description);
+                aList.set(i,description);
+                values.set(i,edVal);
+            }
+        }
+    }
+
+    public void editName(String edNameS) {
+        nameS = edNameS;
+        //values.add(edVal);
+        int size = aList.size();
+        //this.nameS=" " + edVal;
+        for(int i=0; i<size;i++)
+        {
+            if(itemLocation.equals(names.get(i)))
+            {
+                String description = nameS + this.serialS + this.valueS;
+                //aList.set(i,aList.get(i)+description);
+                aList.set(i,description);
+                names.set(i,nameS);
+            }
+        }
     }
 }
