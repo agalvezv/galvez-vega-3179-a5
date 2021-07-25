@@ -109,6 +109,8 @@ public class ListController {
             names = lManage.updateNames();
 
             nameField.setText("Name set.");
+            lManage.serialS = "AAAAAAAAA";
+            lManage.valueS = "0.00";
         }
         else
         {
@@ -122,14 +124,14 @@ public class ListController {
     public void newMonValue(ActionEvent actionEvent) {
         //NumberFormat fmt = NumberFormat.getCurrencyInstance();
         //System.out.println(fmt.format(120.00));
-
+        String mySerial = lManage.serialS;
         valueS = valueField.getText();
         NumberFormat money = NumberFormat.getCurrencyInstance();
         Double valueD = Double.parseDouble(valueS);
         //money.format(valueD);
         valueS = "" + money.format(valueD);
 
-        lManage.addMonValue(valueS);
+        lManage.addMonValue(valueS, mySerial);
         aList = lManage.updateList();
         valueField.setText("Money value set.");
 
@@ -137,6 +139,7 @@ public class ListController {
     }
 
     public void newSerialNumber(ActionEvent actionEvent) {
+        String myValue = lManage.valueS;
         serialS = serialField.getText();
         Pattern pattern = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]");
         Matcher match = pattern.matcher(serialS);
@@ -149,7 +152,7 @@ public class ListController {
         }
         else{
             //String mydesc= lManage.descS;
-            lManage.addSerial(dateS, mydesc);
+            lManage.addSerial(serialS, valueS);
             aList = lManage.updateList();
             serialField.setText("Serial Number Set.");
         }
