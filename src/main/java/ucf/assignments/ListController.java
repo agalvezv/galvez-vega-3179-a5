@@ -90,6 +90,43 @@ public class ListController {
 
         recField.setText("Filename: "+recS);
     }
+    public void sendValueTSV(ActionEvent actionEvent) {
+        sendS = sendField.getText();
+        ListMoveOperations mManage = new ListMoveOperations(aList,names,sendS);
+        mManage.sendListToTSV();
+        sendField.setText("Filename: "+sendS);
+    }
+
+    public void sendValueJson(ActionEvent actionEvent) {
+        sendS = sendField.getText();
+        ListMoveOperations mManage = new ListMoveOperations(aList,names,sendS);
+        mManage.sendListToJson();
+        sendField.setText("Filename: "+sendS);
+    }
+
+    public void recValueTSV(ActionEvent actionEvent) {
+        recS = recField.getText();
+        ListMoveOperations mManage = new ListMoveOperations(aList,names,recS);
+        aList.clear();
+        aList = mManage.recListFromTSV();
+
+        names.clear();
+        names = mManage.recNamesFromTSV();
+
+        recField.setText("Filename: "+recS);
+    }
+
+    public void recValueJson(ActionEvent actionEvent) {
+        recS = recField.getText();
+        ListMoveOperations mManage = new ListMoveOperations(aList,names,recS);
+        aList.clear();
+        aList = mManage.recListFromJson();
+
+        names.clear();
+        names = mManage.recNamesFromJson();
+
+        recField.setText("Filename: "+recS);
+    }
 
     public void incompListValue(ActionEvent actionEvent) {
         //ignore
@@ -276,6 +313,8 @@ public class ListController {
     public void sortByValue(ActionEvent actionEvent) {
         lManage.sortByValue();
     }
+
+
     //This is going to carry strong similarities to the previous applications
 
 

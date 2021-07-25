@@ -344,7 +344,7 @@
       </Button>
       <Button mnemonicParsing="false" onAction="#sortBySerial" prefHeight="31.0" prefWidth="191.0" text="Sort List By Serial #" GridPane.columnIndex="7" GridPane.rowIndex="9" />
       <Button mnemonicParsing="false" onAction="#sortByValue" prefHeight="31.0" prefWidth="195.0" text="Sort List By Value " GridPane.columnIndex="7" GridPane.rowIndex="10" />
-      <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="152.0" text="Send TSV" GridPane.columnIndex="6" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+      <Button mnemonicParsing="false" onAction="#sendValueTSV" prefHeight="32.0" prefWidth="152.0" text="Send TSV" GridPane.columnIndex="6" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -352,7 +352,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="152.0" text="Send Json" GridPane.columnIndex="8" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+      <Button mnemonicParsing="false" onAction="#sendValueJson" prefHeight="32.0" prefWidth="152.0" text="Send Json" GridPane.columnIndex="8" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -360,7 +360,7 @@
             <Insets bottom="4.0" left="40.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="152.0" text="Receive TSV" GridPane.columnIndex="6" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+      <Button mnemonicParsing="false" onAction="#recValueTSV" prefHeight="32.0" prefWidth="152.0" text="Receive TSV" GridPane.columnIndex="6" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
          <padding>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
@@ -368,7 +368,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="152.0" text="Receive Json" GridPane.columnIndex="8" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+      <Button mnemonicParsing="false" onAction="#recValueJson" prefHeight="32.0" prefWidth="152.0" text="Receive Json" GridPane.columnIndex="8" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
