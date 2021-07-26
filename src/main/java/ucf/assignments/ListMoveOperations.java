@@ -5,13 +5,14 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+
+
 
 public class ListMoveOperations {
     public ArrayList aList = new ArrayList();
@@ -130,6 +131,17 @@ public class ListMoveOperations {
     }
 
     public void sendListToJson() {
+        /*
+        JSONObject mylist = new JSONObject();
+
+
+        int size2 = aList.size();
+        for(int i=0;i<size2;i++)
+        {
+
+        }
+
+         */
         String json = new Gson().toJson(aList);
         try
         {
@@ -238,3 +250,6 @@ public class ListMoveOperations {
         return aList;
     }
 }
+
+//This area in general is built the same way as it was in assignment four. there are just added functions for the appropriate areas.
+//this assignment focuses on tsv, html and json

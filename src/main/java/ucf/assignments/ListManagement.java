@@ -289,3 +289,59 @@ public class ListManagement {
         }
     }
 }
+
+
+
+
+
+//this was written outside of the program
+
+//Preset set of array lists for
+//name
+//serial
+//value
+
+//dominating list of lists that represent the total package of items and info
+
+//Strings to intake information received from interface
+//constructor to receive in bulk
+//get and set for each type string to receive in a larger bulk
+
+//get and setter for each array list
+
+//get set in the vein of this:
+/*
+    public String getResponse() {
+    return response;
+}
+
+public void setResponse(String response) {
+    this.response = response;
+}
+ */
+//constructor is going to be taking in arrays of strings, lists
+//make variables as needed
+//no fields here
+
+//each of these should at least have a set
+//name list and total list should have a get function too
+
+
+//function to add this into array list
+//this can be implemented simply with using the add functionality
+//this add function will represent the add operations of multiple lists that
+
+//function that uses for loop to appropriately manage adding a serial number to the a list
+
+
+//function that uses a loop to appropriately manage adding the monetary value to the a list.
+
+
+
+//new function unlike assignment four that set a location string for specific editing
+
+//edit name, edit serial and edit monetary value all refer to this string and runa loop to check for a match to edit appropriately.
+
+//sorting functions created for names, serial or value options
+//uses a side gathering of array lists and tempts, sorts the type of value through a name array list and uses a for loop to make the temps match. Temp replaces the a list and the name list is adjusted as it is used in multiple functions.
+

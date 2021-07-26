@@ -41,7 +41,6 @@ class ListMoveOperations {
 
 +public ArrayList aList;
 +public ArrayList names;
-+public ArrayList complete;
 +String sendName;
 +String sendInfo;
 
