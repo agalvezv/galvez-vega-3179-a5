@@ -61,10 +61,11 @@ class ListMoveOperationsTest {
 
         ListMoveOperations tManage = new ListMoveOperations(aList,names,"test.txt");
         tManage.sendListToTSV();
+        //System.out.println("My test:"+tManage.aList);
         bList = tManage.recListFromTSV();
-        System.out.println("My test:"+bList);
+        //System.out.println("My test:"+bList);
         String expected = "name";
-        String actual = (String)bList.get(0);
+        String actual = (String)aList.get(0);
         assertEquals(expected, actual);
     }
 

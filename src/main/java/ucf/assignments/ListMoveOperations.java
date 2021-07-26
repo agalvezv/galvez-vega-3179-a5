@@ -120,7 +120,7 @@ public class ListMoveOperations {
         String json = new Gson().toJson(names);
         try
         {
-            FileWriter writeFile = new FileWriter("lists_saved/" +sendName+ "N");
+            FileWriter writeFile = new FileWriter("lists_saved/" +"N"+sendName);
             writeFile.write(String.valueOf(json));
             writeFile.close();
         }
@@ -160,7 +160,7 @@ public class ListMoveOperations {
         String json = new Gson().toJson(names);
         try
         {
-            FileWriter writeFile = new FileWriter("lists_saved/" +sendName+ "N");
+            FileWriter writeFile = new FileWriter("lists_saved/" +"N"+sendName);
             writeFile.write(String.valueOf(json));
             writeFile.close();
         }
