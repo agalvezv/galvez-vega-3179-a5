@@ -5,13 +5,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
-
+import java.util.Scanner;
 
 
 public class ListMoveOperations {
@@ -215,6 +213,7 @@ public class ListMoveOperations {
 
 
     public ArrayList recListFromTSV() {
+        /*
         ArrayList<String[]> Data = new ArrayList<>(); //initializing a new ArrayList out of String[]'s
         try (BufferedReader TSVReader = new BufferedReader(new FileReader("lists_saved/"+ sendName))) {
             String line = null;
@@ -226,9 +225,30 @@ public class ListMoveOperations {
             System.out.println("Something went wrong");
         }
         return Data;
+
+         */
+        File givenFile = new File("lists_saved/"+sendName);
+        String readFile="";
+        aList.clear();
+        try{
+            Scanner readgFile = new Scanner(givenFile);
+            while(readgFile.hasNext())
+            {
+                readFile = readgFile.nextLine();
+                aList.add(readFile);
+            }
+            readgFile.close();
+
+        }
+        catch(Exception e)
+        {
+            System.out.println("There was an error.");
+        }
+        return aList;
     }
 
     public ArrayList recNamesFromTSV() {
+        /*
         ArrayList<String[]> Data = new ArrayList<>(); //initializing a new ArrayList out of String[]'s
         try (BufferedReader TSVReader = new BufferedReader(new FileReader("lists_saved/"+ sendName))) {
             String line = null;
@@ -240,6 +260,28 @@ public class ListMoveOperations {
             System.out.println("Something went wrong");
         }
         return Data;
+
+         */
+
+        File givenFile = new File("lists_saved/"+"N"+sendName);
+        String readFile="";
+        names.clear();
+        try{
+            Scanner readgFile = new Scanner(givenFile);
+            while(readgFile.hasNext())
+            {
+                readFile = readgFile.nextLine();
+                names.add(readFile);
+            }
+            readgFile.close();
+
+        }
+        catch(Exception e)
+        {
+            System.out.println("There was an error.");
+        }
+        return names;
+
     }
 
     public ArrayList recListFromJson() {
