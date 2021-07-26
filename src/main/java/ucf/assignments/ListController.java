@@ -127,10 +127,12 @@ public class ListController {
 
         recField.setText("Filename: "+recS);
     }
-
+/*
     public void incompListValue(ActionEvent actionEvent) {
         //ignore
     }
+
+ */
 
     public void totalListValue(ActionEvent actionEvent) {
         displayField.clear();
@@ -259,7 +261,7 @@ public class ListController {
         aList = lManage.updateList();
         valueField.setText("Money value set.");
     }
-
+/*
     public void compValue(ActionEvent actionEvent) {
         //not used
     }
@@ -267,6 +269,8 @@ public class ListController {
     public void incompValue(ActionEvent actionEvent) {
         //not used
     }
+
+ */
 
     public void editName(ActionEvent actionEvent) {
         edNameS = edNameField.getText();

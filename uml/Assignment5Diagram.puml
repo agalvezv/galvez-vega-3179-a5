@@ -1,0 +1,146 @@
+@startuml
+class ListManagement {
+    +public String serialS;
+    +public String valueS;
+    +public String nameS;
+
+   +public String sendS;
+    +public String recS;
+
+    +public String itemLocation;
+
+
+
+    +public String remS;
+    +public ArrayList aList
+    +public ArrayList names
+    +public ArrayList serials
+    +public ArrayList values
+
+    +public String allDisplay()
+    +public void setListInformation()
+    +public void addName(String nameS)
+    +public void addSerial(String serialS, String valueS)
+    +public void addMonValue(String serialTemp, String valueS)
+    +public ArrayList updateList()
+    +public ArrayList updateNames()
+    +public void remList(String remS)
+    +public void clearList()
+    +public void sortByName() {
+    +public void sortBySerial()
+    +public void sortByValue()
+    +public void setEditLocation(String editemS)
+
+    +public void editSerial(String edSerS, String valueS)
+    +public void editMonValue(String edVal, String mySerial)
+    +public void editName(String edNameS)
+
+}
+
+class ListMoveOperations {
+
++public ArrayList aList;
++public ArrayList names;
++public ArrayList complete;
++String sendName;
++String sendInfo;
+
+
++public ArrayList recNamesFromHTML()
++public ArrayList recListFromHTML()
++private void sendNameToText()
++public void sendListToJson()
++private void sendNameToTSV()
++public void sendListToTSV()
++private void sendNameToHTML()
++public void sendListToHTML()
+
+
++public ArrayList recListFromTSV()
+
+
++public ArrayList recNamesFromTSV()
+
++public ArrayList recListFromJson()
+
++public ArrayList recNamesFromJson()
+
+}
+
+class ListController {
+    +public TextField nameField;
+    +public TextField serialField;
+    +public TextField valueField;
+
+    +public String nameS;
+    +public String serialS;
+    +public String valueS;
+
+    +public TextField editemField;
+    +public String editemS;
+
+    +public TextField edNameField;
+    +public TextField edSerField;
+    +public TextField edValField;
+
+    +public String edNameS;
+    +public String edSerS;
+    +public String edVal;
+
+    +public TextField sendField;
+    +public TextField recField;
+
+    +public String sendS;
+    +public String recS;
+
+    +public TextField remField;
+
+    +public String remS;
+
+
+
+    +public String dispS ="";
+    +public TextArea displayField;
+
+    +public ArrayList aList
+    +public ArrayList names
+    +public ArrayList complete
+    +public ListManagement lManage
+
+
+    +totalListValue()
+
+    +newListValue()
+    +newNameValue()
+    +newSerial()
+    +newMonValue()
+
+    +public void sendValue()
+    +public void recValue()
+    +public void sendValueTSV()
+    +public void sendValueJson()
+    +public void recValueTSV()
+    +public void recValueJson()
+
+    +clearList()
+    +editListItem()
+    +editName()
+    +editSerial()
+    +editMonValue()
+
+
+}
+
+class List {
+
+    main()
+    start()
+}
+
+
+
+javafx.Application <|-- List
+List - ListController
+ListController - ListManagement
+ListController - ListMoveOperations
+@enduml

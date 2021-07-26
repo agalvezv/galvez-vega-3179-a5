@@ -2,12 +2,16 @@ package ucf.assignments;
 
 import com.google.gson.Gson;
 import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ListMoveOperations {
     public ArrayList aList = new ArrayList();
@@ -156,9 +160,41 @@ public class ListMoveOperations {
 
 
     public ArrayList recListFromHTML() {
+        Document doc = Jsoup.parse("lists_saved/"+sendName);
+        Elements tables = doc.select("table");
+        for (Element table : tables) {
+            Elements trs = table.select("tr");
+            String[][] trtd = new String[trs.size()][];
+            for (int i = 0; i < trs.size(); i++) {
+                Elements tds = trs.get(i).select("th");
+                trtd[i] = new String[tds.size()];
+                for (int j = 0; j < tds.size(); j++) {
+                    trtd[i][j] = tds.get(j).text();
+                    aList.add(tds.get(j).text());
+                }
+            }
+
+        }
+        return aList;
     }
 
     public ArrayList recNamesFromHTML() {
+        Document doc = Jsoup.parse("lists_saved/"+sendName);
+        Elements tables = doc.select("table");
+        for (Element table : tables) {
+            Elements trs = table.select("tr");
+            String[][] trtd = new String[trs.size()][];
+            for (int i = 0; i < trs.size(); i++) {
+                Elements tds = trs.get(i).select("th");
+                trtd[i] = new String[tds.size()];
+                for (int j = 0; j < tds.size(); j++) {
+                    trtd[i][j] = tds.get(j).text();
+                    names.add(tds.get(j).text());
+                }
+            }
+
+        }
+        return names;
 
     }
 
@@ -195,8 +231,10 @@ public class ListMoveOperations {
     }
 
     public ArrayList recListFromJson() {
+        return aList;
     }
 
     public ArrayList recNamesFromJson() {
+        return aList;
     }
 }

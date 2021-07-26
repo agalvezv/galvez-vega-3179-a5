@@ -53,26 +53,10 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin>
       </TextArea>
-      <Button alignment="CENTER" contentDisplay="CENTER" lineSpacing="2.0" mnemonicParsing="false" onAction="#incompListValue" prefHeight="31.0" prefWidth="176.0" text="Not Comp" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="TOP">
-         <padding>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </padding>
-         <GridPane.margin>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </GridPane.margin>
-      </Button>
       <Button alignment="CENTER" contentDisplay="CENTER" lineSpacing="2.0" mnemonicParsing="false" onAction="#totalListValue" text="Total List" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER">
          <padding>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
-      </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" lineSpacing="2.0" mnemonicParsing="false" onAction="#compListValue" prefHeight="31.0" prefWidth="119.0" text="Complete" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="BOTTOM">
-         <padding>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </padding>
-         <GridPane.margin>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </GridPane.margin>
       </Button>
       <Button mnemonicParsing="false" onAction="#newListValue" prefHeight="25.0" prefWidth="368.0" text="Create a New List" GridPane.columnSpan="4" GridPane.rowIndex="1">
          <GridPane.margin>
@@ -251,38 +235,6 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <Button mnemonicParsing="false" onAction="#compValue" prefHeight="25.0" prefWidth="142.0" text="Complete Item" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="8">
-         <padding>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </padding>
-         <GridPane.margin>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </GridPane.margin>
-      </Button>
-      <Button mnemonicParsing="false" onAction="#incompValue" prefHeight="25.0" prefWidth="204.0" text="Incomplete Item" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="10">
-         <GridPane.margin>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </GridPane.margin>
-         <padding>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </padding>
-      </Button>
-      <TextField fx:id="compField" promptText="name of item" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="9">
-         <GridPane.margin>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </GridPane.margin>
-         <padding>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </padding>
-      </TextField>
-      <TextField fx:id="incompField" promptText="name of item" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="11">
-         <padding>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </padding>
-         <GridPane.margin>
-            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
-         </GridPane.margin>
-      </TextField>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Instructions:" GridPane.rowIndex="15">
          <font>
             <Font size="29.0" />
