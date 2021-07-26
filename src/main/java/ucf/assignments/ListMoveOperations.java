@@ -1,6 +1,6 @@
 package ucf.assignments;
 
-import com.google.gson.Gson;
+import com.google.gson.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -285,13 +285,55 @@ public class ListMoveOperations {
     }
 
     public ArrayList recListFromJson() {
+        /*
+        try{
+            aList.clear();
+            File givenFile = new File("lists_saved/"+"N"+sendName);
+            JsonElement fileElement = JsonParser.parseReader(new FileReader(givenFile));
+            JsonObject fileObject = fileElement.getAsJsonObject();
+            JsonArray jsonArrayofItems = fileObject.get("List").getAsJsonArray();
+            for(JsonElement itemElement : jsonArrayofItems)
+            {
+                JsonObject tempObject = itemElement.getAsJsonObject();
+                String tempS = tempObject.get("Item").getAsString();
+                aList.add(tempS);
+            }
+
+            return aList;
+
+        }
+        catch(Exception e)
+        {
+            System.out.println("Errors.");
+        }
+
+         */
         return aList;
     }
 
     public ArrayList recNamesFromJson() {
+        /*
+        try {
+            aList.clear();
+            File givenFile = new File("lists_saved/" + "N" + sendName);
+            JsonElement fileElement = JsonParser.parseReader(new FileReader(givenFile));
+            JsonObject fileObject = fileElement.getAsJsonObject();
+            JsonArray jsonArrayofItems = fileObject.get("List").getAsJsonArray();
+            for (JsonElement itemElement : jsonArrayofItems) {
+                JsonObject tempObject = itemElement.getAsJsonObject();
+                String tempS = tempObject.get("Item").getAsString();
+                aList.add(tempS);
+            }
+            return aList;
+        } catch (Exception e) {
+            System.out.println("Errors");
+        }
+
+         */
         return aList;
     }
 }
+
 
 //This area in general is built the same way as it was in assignment four. there are just added functions for the appropriate areas.
 //this assignment focuses on tsv, html and json
