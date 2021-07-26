@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1400.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" stylesheets="@layout.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ListController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="980.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;" stylesheets="@layout.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ListController">
   <columnConstraints>
       <ColumnConstraints maxWidth="91.0" minWidth="10.0" prefWidth="88.0" />
     <ColumnConstraints maxWidth="105.0" minWidth="10.0" prefWidth="83.0" />
@@ -53,7 +53,7 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </GridPane.margin>
       </TextArea>
-      <Button alignment="CENTER" contentDisplay="CENTER" lineSpacing="2.0" mnemonicParsing="false" onAction="#totalListValue" text="Total List" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER">
+      <Button alignment="CENTER" contentDisplay="CENTER" lineSpacing="2.0" mnemonicParsing="false" onAction="#totalListValue" prefHeight="31.0" prefWidth="354.0" text="Total List" textAlignment="CENTER" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER">
          <padding>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
@@ -82,14 +82,10 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
       </Button>
-      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
       <Separator prefHeight="0.0" prefWidth="83.0" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
       <Separator prefWidth="200.0" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
       <Separator prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
       <Separator prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="7" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Items Of Your List" wrappingWidth="279.13671875" GridPane.columnSpan="3" GridPane.rowIndex="12" GridPane.valignment="BOTTOM">
          <font>
             <Font size="20.0" />
@@ -108,17 +104,8 @@
       </Text>
       <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
       <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
       <Separator prefWidth="200.0" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
       <Separator prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
-      <Separator prefWidth="200.0" GridPane.rowIndex="8" GridPane.valignment="TOP" />
-      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" GridPane.valignment="TOP" />
-      <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="8" GridPane.valignment="TOP" />
-      <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="8" GridPane.valignment="TOP" />
-      <Separator prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="8" GridPane.valignment="TOP" />
-      <Separator prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="8" GridPane.valignment="TOP" />
-      <Separator prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="8" GridPane.valignment="TOP" />
-      <Separator prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="8" GridPane.valignment="TOP" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="List Distribution" GridPane.columnIndex="7">
          <font>
             <Font size="20.0" />
@@ -135,7 +122,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <TextField fx:id="sendField" promptText="name.txt" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+      <TextField fx:id="sendField" promptText="name.txt/name.html/name.json" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -151,7 +138,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <TextField fx:id="recField" promptText="name.txt" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+      <TextField fx:id="recField" promptText="name.txt/name.html/name.json" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -169,7 +156,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <TextField fx:id="valueField" promptText="Enter a description" GridPane.columnSpan="4" GridPane.rowIndex="4">
+      <TextField fx:id="valueField" promptText="0.00" GridPane.columnSpan="4" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -185,7 +172,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <TextField fx:id="serialField" prefHeight="25.0" prefWidth="287.0" promptText="YYYY-MM-DD" GridPane.columnSpan="4" GridPane.rowIndex="3" />
+      <TextField fx:id="serialField" prefHeight="25.0" prefWidth="287.0" promptText="A000000000" GridPane.columnSpan="4" GridPane.rowIndex="3" />
       <Button mnemonicParsing="false" onAction="#remValue" prefHeight="29.0" prefWidth="156.0" text="Remove Item" GridPane.columnSpan="2" GridPane.rowIndex="10" />
       <TextField fx:id="remField" prefHeight="28.0" prefWidth="228.0" promptText="Enter a name" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="10">
          <GridPane.margin>
@@ -195,7 +182,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </TextField>
-      <Button mnemonicParsing="false" onAction="#clearList" prefHeight="25.0" prefWidth="344.0" text="Clear List" GridPane.columnSpan="4" GridPane.rowIndex="11">
+      <Button mnemonicParsing="false" onAction="#clearList" prefHeight="25.0" prefWidth="344.0" text="Clear List" textAlignment="CENTER" GridPane.columnSpan="4" GridPane.rowIndex="11">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -203,7 +190,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <TextField fx:id="edSerField" GridPane.columnSpan="4" GridPane.rowIndex="8">
+      <TextField fx:id="edSerField" promptText="B000000000" GridPane.columnSpan="4" GridPane.rowIndex="8">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -211,7 +198,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </TextField>
-      <TextField fx:id="edValField" GridPane.columnSpan="4" GridPane.rowIndex="9">
+      <TextField fx:id="edValField" promptText="0.00" GridPane.columnSpan="4" GridPane.rowIndex="9">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -261,7 +248,7 @@
          </font>
       </Text>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@REY for suggesting this idea!" GridPane.columnIndex="2" GridPane.rowIndex="17" GridPane.valignment="BOTTOM" />
-      <TextField fx:id="edNameField" GridPane.columnSpan="4" GridPane.rowIndex="7">
+      <TextField fx:id="edNameField" promptText="name" GridPane.columnSpan="4" GridPane.rowIndex="7">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -278,7 +265,7 @@
          </padding>
       </Button>
       <Button mnemonicParsing="false" onAction="#editListItem" prefHeight="31.0" prefWidth="170.0" text="Edit Item" GridPane.columnSpan="2" GridPane.rowIndex="6" />
-      <TextField fx:id="editemField" prefHeight="28.0" prefWidth="316.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="6">
+      <TextField fx:id="editemField" prefHeight="28.0" prefWidth="316.0" promptText="item" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="6">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -286,7 +273,7 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </TextField>
-      <Button mnemonicParsing="false" onAction="#sortByName" prefHeight="31.0" prefWidth="189.0" text="Sort List By Name" GridPane.columnIndex="7" GridPane.rowIndex="8">
+      <Button mnemonicParsing="false" onAction="#sortByName" prefHeight="31.0" prefWidth="375.0" text="Sort List By Name" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="8">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </GridPane.margin>
@@ -294,8 +281,8 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
-      <Button mnemonicParsing="false" onAction="#sortBySerial" prefHeight="31.0" prefWidth="191.0" text="Sort List By Serial #" GridPane.columnIndex="7" GridPane.rowIndex="9" />
-      <Button mnemonicParsing="false" onAction="#sortByValue" prefHeight="31.0" prefWidth="195.0" text="Sort List By Value " GridPane.columnIndex="7" GridPane.rowIndex="10" />
+      <Button mnemonicParsing="false" onAction="#sortBySerial" prefHeight="31.0" prefWidth="375.0" text="Sort List By Serial #" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+      <Button mnemonicParsing="false" onAction="#sortByValue" prefHeight="31.0" prefWidth="375.0" text="Sort List By Value " GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="10" />
       <Button mnemonicParsing="false" onAction="#sendValueTSV" prefHeight="32.0" prefWidth="152.0" text="Send TSV" GridPane.columnIndex="6" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
          <GridPane.margin>
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
@@ -328,6 +315,47 @@
             <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
          </padding>
       </Button>
+      <Separator prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+      <Separator prefWidth="200.0" GridPane.rowIndex="5" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+      <Separator prefWidth="200.0" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="8" GridPane.rowIndex="11" GridPane.valignment="BOTTOM" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+      <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sort Area" GridPane.columnIndex="7" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4) The middle right holds different ways to sort the list." GridPane.rowIndex="17">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
    </children>
    <padding>
       <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
