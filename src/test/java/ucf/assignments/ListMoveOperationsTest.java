@@ -51,19 +51,19 @@ class ListMoveOperationsTest {
     void sendListToTSV() {
         ArrayList aList = new ArrayList();
         ArrayList names = new ArrayList();
-        ArrayList complete = new ArrayList();
         aList.add("name");
         names.add("name");
-        complete.add("incomplete");
 
         ArrayList bList = new ArrayList();
         bList.add(" ");
         bList.clear();
 
-        ListMoveOperations tManage = new ListMoveOperations(aList,names,"test.html");
+
+        ListMoveOperations tManage = new ListMoveOperations(aList,names,"test.txt");
         tManage.sendListToTSV();
         bList = tManage.recListFromTSV();
-        String expected = "[name]";
+        System.out.println("My test:"+bList);
+        String expected = "name";
         String actual = (String)bList.get(0);
         assertEquals(expected, actual);
     }
@@ -79,11 +79,11 @@ class ListMoveOperationsTest {
         bList.add(" ");
         bList.clear();
 
-        ListMoveOperations tManage = new ListMoveOperations(aList,names,"test.html");
+        ListMoveOperations tManage = new ListMoveOperations(aList,names,"test.txt");
         tManage.sendListToTSV();
         bList = tManage.recListFromTSV();
-        String expected = "[name]";
-        String actual = (String)bList.get(0);
+        String expected = "name";
+        String actual = (String)aList.get(0);
         assertEquals(expected, actual);
     }
     @Test
@@ -99,10 +99,10 @@ class ListMoveOperationsTest {
         bList.add(" ");
         bList.clear();
 
-        ListMoveOperations tManage = new ListMoveOperations(aList,names,"test.html");
+        ListMoveOperations tManage = new ListMoveOperations(aList,names,"test.json");
         tManage.sendListToJson();
         bList = tManage.recListFromJson();
-        String expected = "[name]";
+        String expected = "name";
         String actual = (String)bList.get(0);
         assertEquals(expected, actual);
     }
@@ -118,10 +118,10 @@ class ListMoveOperationsTest {
         bList.add(" ");
         bList.clear();
 
-        ListMoveOperations tManage = new ListMoveOperations(aList,names,"test.html");
+        ListMoveOperations tManage = new ListMoveOperations(aList,names,"test.json");
         tManage.sendListToJson();
         bList = tManage.recListFromJson();
-        String expected = "[name]";
+        String expected = "name";
         String actual = (String)bList.get(0);
         assertEquals(expected, actual);
     }
