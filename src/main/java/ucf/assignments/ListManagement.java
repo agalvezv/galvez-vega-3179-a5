@@ -1,4 +1,9 @@
 package ucf.assignments;
+/*
+ *  UCF COP3330 Summer 2021 Assignment 5 Solution
+ *  Copyright 2021 Alex Galvez-Vega
+ */
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -287,6 +292,10 @@ public class ListManagement {
                 names.set(i,nameS);
             }
         }
+    }
+
+    public ArrayList getSerialList() {
+        return serials;
     }
 }
 

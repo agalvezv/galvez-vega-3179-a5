@@ -1,5 +1,8 @@
 package ucf.assignments;
-
+/*
+ *  UCF COP3330 Summer 2021 Assignment 5 Solution
+ *  Copyright 2021 Alex Galvez-Vega
+ */
 import com.google.gson.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

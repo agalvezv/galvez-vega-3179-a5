@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.text.NumberFormat;
+/*
+ *  UCF COP3330 Summer 2021 Assignment 5 Solution
+ *  Copyright 2021 Alex Galvez-Vega
+ */
 
 
 public class ListController {
@@ -60,6 +64,7 @@ public class ListController {
     public ArrayList names = new ArrayList();
     public ArrayList complete = new ArrayList();
     public ListManagement lManage = new ListManagement();
+    public ArrayList serials = new ArrayList();
     // public ListMoveOperations mManage = new ListMoveOperations();
 
 
@@ -194,6 +199,20 @@ public class ListController {
     public void newSerialNumber(ActionEvent actionEvent) {
         String myValue = lManage.valueS;
         serialS = serialField.getText();
+
+        serials = lManage.getSerialList();
+        int size2 = serials.size();
+
+        for(int i=0;i<size2;i++)
+        {
+            if(serialS.matches((String) serials.get(i)))
+            {
+                System.out.println("Cannot proceed. Serial number in use.");
+                break;
+            }
+        }
+
+
         Pattern pattern = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]");
         Matcher match = pattern.matcher(serialS);
 
@@ -228,6 +247,18 @@ public class ListController {
     public void editSerialValue(ActionEvent actionEvent) {
         String myValue = lManage.valueS;
         edSerS=edSerField.getText();
+
+        serials = lManage.getSerialList();
+        int size2 = serials.size();
+
+        for(int i=0;i<size2;i++)
+        {
+            if(serialS.matches((String) serials.get(i)))
+            {
+                System.out.println("Cannot proceed. Serial number in use.");
+                break;
+            }
+        }
 
         //serialS = serialField.getText();
         Pattern pattern = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]");

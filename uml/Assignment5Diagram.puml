@@ -12,10 +12,10 @@ class ListManagement {
 
 
     +public String remS;
-    +public ArrayList aList
-    +public ArrayList names
-    +public ArrayList serials
-    +public ArrayList values
+    +public ArrayList aList;
+    +public ArrayList names;
+    +public ArrayList serials;
+    +public ArrayList values;
 
     +public String allDisplay()
     +public void setListInformation()
@@ -34,6 +34,7 @@ class ListManagement {
     +public void editSerial(String edSerS, String valueS)
     +public void editMonValue(String edVal, String mySerial)
     +public void editName(String edNameS)
+    +public ArrayList getSerial()
 
 }
 
@@ -67,6 +68,7 @@ class ListMoveOperations {
 }
 
 class ListController {
+    +ArrayList serials;
     +public TextField nameField;
     +public TextField serialField;
     +public TextField valueField;
@@ -101,10 +103,10 @@ class ListController {
     +public String dispS ="";
     +public TextArea displayField;
 
-    +public ArrayList aList
-    +public ArrayList names
-    +public ArrayList complete
-    +public ListManagement lManage
+    +public ArrayList aList;
+    +public ArrayList names;
+    +public ArrayList complete;
+    +public ListManagement lManage;
 
 
     +totalListValue()
